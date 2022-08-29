@@ -3,11 +3,16 @@ import {createRoot} from 'react-dom/client'
 import {ThemeProvider} from 'styled-components'
 
 import {GlobalStyle, darkTheme, defaultTheme} from './utils'
-import {PrimaryButton, SecondaryButton, TertiaryButton} from './components'
-import {SignUpModal} from './components'
+import {
+  SignUpModal,
+  PrimaryButton,
+  SecondaryButton,
+  TertiaryButton,
+} from './components'
 
 const App = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(false)
+  const [showModal, setShowModal] = useState(false)
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
       <button
@@ -58,9 +63,14 @@ const App = () => {
         <TertiaryButton modifiers={['error', 'tertiaryButtonError']}>
           Tertiary
         </TertiaryButton>
+        <PrimaryButton
+          style={{margin: '0 16px'}}
+          onClick={() => setShowModal(!showModal)}
+        >
+          Show modal
+        </PrimaryButton>
 
-        <p>modal</p>
-        <SignUpModal />
+        <SignUpModal showModal={showModal} setShowModal={setShowModal} />
         <GlobalStyle />
       </div>
     </ThemeProvider>
