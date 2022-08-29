@@ -9,10 +9,15 @@ import {
 
 const App = () => (
   <div>
+    <p>normal</p>
     <PrimaryButton>Primary</PrimaryButton>
     <SecondaryButton>Secondary</SecondaryButton>
     <TertiaryButton>Tertiary</TertiaryButton>
-    <p></p>
+    <p>small medium large</p>
+    <PrimaryButton modifiers={['small']}>Primary</PrimaryButton>
+    <SecondaryButton>Secondary</SecondaryButton>
+    <TertiaryButton modifiers="large">Tertiary</TertiaryButton>
+    <p>disabled</p>
     <PrimaryButton disabled>Primary</PrimaryButton>
     <SecondaryButton disabled>Secondary</SecondaryButton>
     <TertiaryButton disabled>Tertiary</TertiaryButton>
