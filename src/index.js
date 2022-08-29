@@ -4,6 +4,7 @@ import {ThemeProvider} from 'styled-components'
 
 import {GlobalStyle, darkTheme, defaultTheme} from './utils'
 import {PrimaryButton, SecondaryButton, TertiaryButton} from './components'
+import {SignUpModal} from './components'
 
 const App = () => {
   const [useDarkTheme, setUseDarkTheme] = useState(false)
@@ -58,6 +59,8 @@ const App = () => {
           Tertiary
         </TertiaryButton>
 
+        <p>modal</p>
+        <SignUpModal />
         <GlobalStyle />
       </div>
     </ThemeProvider>
