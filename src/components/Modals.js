@@ -19,7 +19,7 @@ const ModalWrapper = styled.div`
   background: ${props => props.theme.formElementBackground};
 `
 
-const SignUpHeader = styled.h3`
+const ModalHeader = styled.h3`
   font-size: ${typeScale.header3};
 `
 
@@ -45,7 +45,7 @@ export const SignUpModal = () => {
   return (
     <ModalWrapper>
       <img src={Illustrations.SignUp} alt="Sign up for an account!" />
-      <SignUpHeader>Sign Up</SignUpHeader>
+      <ModalHeader>Sign Up</ModalHeader>
       <SignUpText>
         Sign up today to get access to all of our content and features!
       </SignUpText>
