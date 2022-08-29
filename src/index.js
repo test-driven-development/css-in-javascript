@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import {createRoot} from 'react-dom/client'
+import {GlobalStyle} from './utils'
+import {
+  PrimaryButton,
+  SecondaryButton,
+  TertiaryButton,
+} from './components/Buttons'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => (
+  <div>
+    <PrimaryButton>Primary</PrimaryButton>
+    <SecondaryButton>Secondary</SecondaryButton>
+    <TertiaryButton>Tertiary</TertiaryButton>
+    <p></p>
+    <PrimaryButton disabled>Primary</PrimaryButton>
+    <SecondaryButton disabled>Secondary</SecondaryButton>
+    <TertiaryButton disabled>Tertiary</TertiaryButton>
+    <GlobalStyle />
+  </div>
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const container = document.querySelector('#root')
+const root = createRoot(container)
+root.render(<App />)
