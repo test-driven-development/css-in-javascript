@@ -50,8 +50,10 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addons": "^5.3.13",
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addon-docs": "^5.3.14",
+    "@storybook/addon-backgrounds": "^5.3.14",
     "@storybook/addon-contexts": "^5.3.14",
     "@storybook/preset-create-react-app": "^1.5.2",
     "@storybook/react": "^5.3.13",
