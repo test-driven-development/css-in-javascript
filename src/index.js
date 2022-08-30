@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
-import {createRoot} from 'react-dom/client'
+import ReactDOM from 'react-dom'
 import {ThemeProvider} from 'styled-components'
 
-import {GlobalStyle, darkTheme, defaultTheme} from './utils'
+import {darkTheme, defaultTheme, GlobalStyle} from './utils'
 import {
-  SignUpModal,
   PrimaryButton,
   SecondaryButton,
+  SignUpModal,
   TertiaryButton,
 } from './components'
 
@@ -16,14 +16,22 @@ const App = () => {
   return (
     <ThemeProvider theme={useDarkTheme ? darkTheme : defaultTheme}>
       <button
-        style={{margin: '0 16px 24px', padding: '8px', background: 'none'}}
+        style={{
+          margin: '0 16px 24px',
+          padding: '8px',
+          background: 'none',
+        }}
         onClick={() => setUseDarkTheme(true)}
       >
         Dark theme
       </button>
 
       <button
-        style={{margin: '0 16px 24px', padding: '8px', background: 'none'}}
+        style={{
+          margin: '0 16px 24px',
+          padding: '8px',
+          background: 'none',
+        }}
         onClick={() => setUseDarkTheme(false)}
       >
         Default theme
@@ -77,6 +85,4 @@ const App = () => {
   )
 }
 
-const container = document.querySelector('#root')
-const root = createRoot(container)
-root.render(<App />)
+ReactDOM.render(<App />, document.querySelector('#root'))
