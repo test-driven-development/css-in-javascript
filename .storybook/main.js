@@ -5,6 +5,7 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-contexts/register',
     '@storybook/addon-backgrounds/register',
+    '@storybook/addon-actions',
   ],
   framework: '@storybook/react',
   core: {
