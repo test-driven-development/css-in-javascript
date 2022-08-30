@@ -1,9 +1,17 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+import {addDecorator, addParameters} from '@storybook/react'
+import {withContexts} from '@storybook/addon-contexts/react'
+import {contexts} from './contexts'
+
+addParameters({
+  backgrounds: [
+    {
+      name: 'Default theme',
+      value: '#ffffff',
+      default: true,
     },
-  },
-}
+    {name: 'Dark theme', value: '#050449'},
+  ],
+})
+
+// noinspection JSCheckFunctionSignatures
+addDecorator(withContexts(contexts))
