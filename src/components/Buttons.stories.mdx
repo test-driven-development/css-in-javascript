@@ -25,6 +25,7 @@ Now we can document and create stories for our button components.
 
 import { Meta, Story, Preview } from "@storybook/addon-docs/blocks";
 import { PrimaryButton, SecondaryButton, TertiaryButton } from "./Buttons";
+import { action } from '@storybook/addon-actions';
 
 <Meta title="Design System|Buttons" component={PrimaryButton} />
 
@@ -42,7 +43,7 @@ Use primary buttons for the highest-priority action that the user must do to com
 
 <Preview withToolbar>
   <Story name="primary">
-    <PrimaryButton>Primary</PrimaryButton>
+    <PrimaryButton onClick={action('button-click')}>Primary</PrimaryButton>
   </Story>
 </Preview>
 
